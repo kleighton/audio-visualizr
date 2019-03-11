@@ -2,16 +2,17 @@
   "name": "sound-visualizer",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "engines": {
+    "node": "6.11.3",
+    "npm": "6.1.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.7.0",
     "eslint": "^5.11.0",
     "express": "^4.16.4",
     "npm-run-all": "^4.1.5",
     "open": "0.0.5",
-    "path": "^0.12.7"
-  },
-  "devDependencies": {
+    "path": "^0.12.7",
     "babel-cli": "^6.26.0",
     "babel-core": "6.17.0",
     "babel-preset-env": "^1.7.0",
@@ -26,6 +27,9 @@
     "gulp-rename": "1.4.0",
     "gulp-sass": "4.0.2",
     "gulp-uglify": "3.0.1"
+  },
+  "devDependencies": {
+    
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
