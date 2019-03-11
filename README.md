@@ -1,1 +1,1 @@
-# sound-visualizr
+# audio-visualizr

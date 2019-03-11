@@ -1,10 +1,15 @@
 {
-  "name": "sound-visualizer",
+  "name": "audio-visualizr",
   "version": "1.0.0",
   "description": "",
   "engines": {
     "node": "6.11.3",
     "npm": "6.1.0"
+  },
+  "scripts": {
+    "start": "gulp dev",
+    "build": "gulp vendor",
+    "postbuild": "babel-node build/server.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.7.0",
@@ -31,12 +36,19 @@
   "devDependencies": {
     
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp dev",
-    "prebuild": "gulp vendor",
-    "build": "babel-node build/server.js"
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
   },
+ 
   "author": "Kyle Leighton",
   "license": "ISC"
 }
