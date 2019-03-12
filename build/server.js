@@ -3,7 +3,7 @@ import express from 'express';
 import path from 'path';
 
 const app = express();
-const port = process.env.PORT ||3003;
+const port = process.env.port;
 
 app.use(express.static(__dirname + '../../'));
 app.use(express.static(__dirname + '../../index.js'));
