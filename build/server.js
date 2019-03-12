@@ -1,24 +1,26 @@
-import open from 'open';
 import express from 'express';
+import open from 'open';
 import path from 'path';
+import compression from 'compression';
 
+const port = process.env.PORT || 4005;
 const app = express();
-const port = 3000 || process.ENV.PORT;
 
-app.use(express.static(__dirname + '../../'));
-app.use(express.static(__dirname + '../../index.js'));
+app.use(compression());
+app.use(express.static('../../'));
+app.use(express.static('../../index.js'));
 
-app.get('/', function (req, res) {
-    res.sendFile(path.resolve(__dirname,'index.html'));
+app.get('/',function(req,res){
+    res.sendFile(path.join(__dirname,'../index.html'));
 });
-app.get('index.html', function (req, res) {
-    res.sendFile(path.resolve(__dirname,'index.html'));
+app.get('/index.html', function (req, res) {
+    res.sendFile(path.join(__dirname,'../index.html'));
 });
 
-// app.listen(port, function (err) {
-//     if (err) {
-//         console.log(err);
-//     } else {
-//         open('http://localhost:' + port);
-//     }
-// });
+app.listen(port, function (err) {
+    if (err) {
+        console.log(err);
+    } else {
+        open('http://localhost:' + port);
+    }
+});
