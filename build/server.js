@@ -3,7 +3,7 @@ import express from 'express';
 import path from 'path';
 
 const app = express();
-const port = process.env.port;
+const port = 3000 || process.ENV.PORT;
 
 app.use(express.static(__dirname + '../../'));
 app.use(express.static(__dirname + '../../index.js'));
@@ -15,10 +15,10 @@ app.get('index.html', function (req, res) {
     res.sendFile(path.resolve(__dirname,'index.html'));
 });
 
-app.listen(port, function (err) {
-    if (err) {
-        console.log(err);
-    } else {
-        open('http://localhost:' + port);
-    }
-});
+// app.listen(port, function (err) {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         open('http://localhost:' + port);
+//     }
+// });
