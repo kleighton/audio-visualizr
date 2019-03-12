@@ -1,12 +1,10 @@
 import express from 'express';
 import open from 'open';
 import path from 'path';
-import compression from 'compression';
 
 const port = process.env.PORT || 4005;
 const app = express();
 
-app.use(compression());
 app.use(express.static('../../'));
 app.use(express.static('../../index.js'));
 
