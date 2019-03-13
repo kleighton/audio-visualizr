@@ -8,8 +8,9 @@
   },
   "scripts": {
     "start": "gulp dev",
-    "build": "gulp vendor",
-    "postbuild": "babel-node build/server.js"
+    "clean-dist": "rimraf ./dist && mkdir dist",
+    "prebuild": "npm run clean-dist",
+    "build": "babel-node build/server.js"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",

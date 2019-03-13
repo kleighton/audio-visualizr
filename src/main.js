@@ -1,5 +1,4 @@
 window.onload = function () {
-    "use strict";
     var paths = document.getElementsByTagName('path');
     var visualizer = document.getElementById('visualizer');
     var mask = visualizer.getElementById('mask');

@@ -1,13 +1,9 @@
 // Load plugins
 const gulp = require("gulp");
 
-const autoprefixer = require("gulp-autoprefixer");
 const browsersync = require("browser-sync").create();
-const cleanCSS = require("gulp-clean-css");
-const header = require("gulp-header");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
-const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
 
 
