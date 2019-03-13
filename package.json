@@ -15,19 +15,21 @@
     "compression": "^1.7.3",
     "eslint": "^5.11.0",
     "express": "^4.16.4",
-   
+
     "npm-run-all": "^4.1.5",
     "open": "0.0.5",
     "path": "^0.12.7"
   },
-  "devDependencies": { "gulp": "^4.0.0",
+  "devDependencies": {
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "4.0.0",
     "gulp-header": "2.0.7",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "1.4.0",
     "gulp-sass": "4.0.2",
-    "gulp-uglify": "3.0.1"},
+    "gulp-uglify": "3.0.1"
+  },
   "babel": {
     "presets": [
       [
