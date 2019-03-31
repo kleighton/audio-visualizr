@@ -16,12 +16,6 @@ gulp.task('vendor', function (cb) {
     ])
     .pipe(gulp.dest('./dist/vendor/bootstrap/js'))
 
-  // Bootstrap SCSS
-  gulp.src([
-      './node_modules/bootstrap/scss/**/*',
-    ])
-    .pipe(gulp.dest('./dist/vendor/bootstrap/scss'))
-
   // ChartJS
   gulp.src([
       './node_modules/chart.js/dist/*.js'
